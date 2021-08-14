@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* body{
+    overflow: hidden;
+} */
+html, body{
+    height: 100%;
+}
+textarea{
+    resize: none;
+}
+
+.logo{
+    height: 60px;
+}
+.stick{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.slidericon{
+    font-size: 40px;
+    color: black;
+}
+.logoText{
+    font-family: 'Indie Flower';
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+#logozone:hover > *{
+    color: #FFC107;
+}
+a:hover{
+    text-decoration: none;
+    color: #FFC107;
+}
+.customtext1{
+    color:white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 100px;
+    text-shadow: -5px -5px 5px #000000;
+    filter: blur(0.8px);
+}
+.custometext2{
+    color: white;
+    font-size: 30px;
+    margin-top: 250px;
+    text-shadow: -5px -5px 5px #000000;
+}
+.customfont{
+    font-family: 'Varela Round';
+    color: black;
+}
+.customweight{
+    font-weight: bold;
+}
+.littleplus{
+    font-size: 12px;
+}
+.little{
+    font-size: 15px;
+}
+.moyen{
+    font-size: 20px;
+}
+.moyenplus{
+    font-size: 35px;
+}
+.title{
+    font-size: 50px;
+}
+.customhr{
+    border-top: solid 3px black;
+}
+.btncustom{
+    background-color: black;
+}
+.test1{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+.text{
+    font-size: 25px;
+}
+.littlepicture{
+    height: 150px;
+    width: 300px;
+    filter: blur(1px);
+    object-fit: cover;
+}
+.customheight{
+    height: 300px;
+}
+.DogPicture{
+    height: 500px;
+    width: 500px;
+}
+.underline{
+    text-decoration: underline;
+    text-decoration-color: #FFC107;
+}
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 8px;
+   }
+   ::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+   }
+   ::-webkit-scrollbar-thumb:hover{
+    background: #FFC107;
+   }
+   ::-webkit-scrollbar-track{
+    background: #FFFFFF;
+    border-radius: 0px;
+   }
