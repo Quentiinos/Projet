@@ -23,3 +23,4 @@ Route::get('/contact', 'MainController@contact')->name('contact');
 Route::get('/adopter', 'MainController@adopter')->name('adopter');
 Route::get('/adopter/{id}', 'MainController@chien')->name('chien');
 Route::post('/contact-send', 'MainController@contactsend');
+Route::get('/parametres', 'MainController@parametres')->name('parametres');

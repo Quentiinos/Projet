@@ -39,19 +39,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group row d-flex justify-content-center">
-                            <div class="col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                                        {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label customfont little" for="remember">
-                                        Se souvenir de moi
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="form-group row mb-0 d-flex justify-content-center">
                             <div class="col-6">
                                 <button type="submit" class="col-12 btn btn-warning customfont customweight moyen">
