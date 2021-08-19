@@ -3,9 +3,8 @@
 @section('title', 'Accueil')
 
 @section('content')
-        <div class="col-12 h-100">
-            <div class="row h-100">
-                <div id="carouselExampleControls" class="carousel slide h-100" data-ride="carousel">
+        <div class="col-12 p-0">
+                <div id="carouselExampleControls" class="carousel slide d-none d-lg-block h-100" data-ride="carousel">
                     <div class="carousel-inner h-100">
                         <div class="carousel-item active">
                             <a class="d-flex justify-content-end align-items-center" href="">
@@ -27,11 +26,11 @@
                         <span class="slidericon"><i class="bi bi-caret-right-fill"></i></span>
                     </a>
                 </div>
-            </div>
         </div>
         <div class="col-10 offset-1 mt-5">
-            <div class="row d-flex justify-content-between align-items-center">
-                <span class="customfont customweight title">Actualités</span>
+            <div class="h25"></div>
+            <div class="row d-flex justify-content-center justify-content-lg-between align-items-center">
+                <span class="customfont customweight title col-12 col-lg-6 text-center text-lg-left">Actualités</span>
                 <a href="{{route('actu')}}"><button class="btn btn-warning customweight customfont">Toute l'actu</button></a>
                 <hr class="col-12">
             </div>
@@ -54,7 +53,7 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-10 offset-1 mt-5">
-                        <div class="row d-flex justify-content-between align-items-center">
+                        <div class="row d-flex justify-content-center justify-content-lg-between align-items-center">
                             <span class="customfont customweight title">Je m'engage</span>
                             <hr class="col-12">
                         </div>
@@ -102,8 +101,8 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-10 offset-1 mt-5">
-                    <div class="row d-flex justify-content-between align-items-center">
-                        <span class="customfont customweight title">Ils n'attendent que vous</span>
+                    <div class="row d-flex justify-content-center justify-content-lg-between align-items-center">
+                        <span class="customfont customweight title col-12 col-lg-6 text-center text-lg-left">Adoptez moi !</span>
                         <a href="{{route('adopter')}}"><button class="btn btn-warning customweight customfont">Tout les chiens</button></a>
                         <hr class="col-12">
                     </div>
@@ -121,6 +120,7 @@
                                 </a>
                             </div>
         @endforeach 
+                            <div class="col-12 invisible d-block d-lg-none"></div>
                     </div>
                 </div>
             </div>

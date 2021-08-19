@@ -14,11 +14,6 @@ textarea{
 .logo{
     height: 60px;
 }
-.stick{
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-}
 .slidericon{
     font-size: 40px;
     color: black;
@@ -103,13 +98,15 @@ a:hover{
     text-decoration: underline;
     text-decoration-color: #FFC107;
 }
+.invisible{
+    height: 100px;
+}
 
 
 
+@media (max-width: 575.98px){
 
-
-
-
+}
 
 ::-webkit-scrollbar {
     width: 15px;

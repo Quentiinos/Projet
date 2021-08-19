@@ -91,8 +91,8 @@
 </head>
 <body>
     <div class="container-fluid h-100 p-0">
-        <nav class="navbar navbar-light p-0">
-            <div class="col-12 stick">
+        <nav class="navbar navbar-light p-0 d-none d-lg-block">
+            <div class="col-12 fixed-top">
                 <div class="row bg-white">
                     <div class="col-4 d-flex align-items-center">
                         <a href="/" id="logozone">
@@ -111,9 +111,11 @@
                             <li class="nav-item">
                                 <a class="nav-link customfont customweight moyen" href="{{route('about')}}">A propos</a>
                             </li>
+@if(Auth::check())
                             <li class="nav-item">
                                 <a class="nav-link customfont customweight moyen" href="{{route('contact')}}">Contact</a>
                             </li>
+@endif
                         </ul>
                     </div>
                     <div class="col-4 d-flex align-items-center justify-content-end">
@@ -143,11 +145,59 @@
                 </div>
             </div>
         </nav>
+
+
+
+        <nav class="navbar navbar-light p-0 d-block d-lg-none">
+            <div class="col-12 fixed-bottom">
+                <div class="row bg-white d-flex align-items-center">
+                    <div class="col-4">
+                        <ul class="nav d-flex justify-content-around">
+                            <li class="nav-item">
+                                <a class="nav-link customfont customweight moyen" href="{{route('adopter')}}"><i class="fas fa-paw"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link customfont customweight moyen" href="{{route('actu')}}"><i class="fas fa-newspaper"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <a href="/" id="logozone" class="d-flex justify-content-around">
+                            <img class="logo my-3" id="logo" src="/pictures/dogood.png">
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <ul class="nav d-flex justify-content-around">
+                            <li class="nav-item">
+                                <a class="nav-link customfont customweight moyen" href="{{route('about')}}"><i class="fas fa-info-circle"></i></a>
+                            </li>
+@guest
+@if (Route::has('login'))
+                            <li class="nav-item">
+                                <a class="nav-link customfont customweight moyen" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i></a>
+                            </li>
+@endif
+@else
+                            <div class="dropup">
+                                <button class="btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="nav-link customfont" href="{{route('contact')}}">Contact</a>
+                                    <a class="nav-link customfont" href="{{route('parametres')}}">Paramètres</a>
+                                    <a class="nav-link customfont customweight" href="{{route('logout')}}">Deconnexion</a>
+                                </div>
+                            </div>
+@endguest
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
 @yield('content')
 @yield('footer')
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9214a30a67.js" crossorigin="anonymous"></script>
     <script src="/js/main.js"></script>
 </body>
 </html>

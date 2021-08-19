@@ -13,39 +13,39 @@
                         <div class="row h-100">
                             <div class="col-12 mt-5">
                                 <div class="row">
-                                    <div class="col-9 p-0">
+                                    <div class="col-12 col-lg-9 p-0">
                                         <img src="{{$dog->url_picture}}" alt="{{$dog->name}}" class="card-img-top rounded-0 rounded-left">
                                     </div>
-                                    <div class="col-3 bg-warning">
+                                    <div class="col-12 col-lg-3 bg-warning">
                                         <div class="row">
                                             <span class="col-12 text-center mt-3 title customfont customweight">{{$dog->name}}</span>
-                                            <div class="col-12 mt-5 text-center">
+                                            <div class="col-4 col-lg-12 mt-lg-5 mt-3 text-center">
                                                 <div class="row">
                                                     <span class="col-12 moyen customfont customweight">Âge</span>
                                                     <span class="col-12 moyen customfont">{{$dog->age}} @if(($dog->age) <= 1) an @else ans @endif</span>    
                                                 </div>
                                             </div>
-                                            <div class="col-12 mt-3 text-center">
+                                            <div class="col-4 col-lg-12 mt-3 text-center">
                                                 <div class="row">
                                                     <span class="col-12 moyen customfont customweight">Sexe</span>
                                                     <span class="col-12 moyen customfont">{{$dog->sexe}}</span>    
                                                 </div>
                                             </div>
-                                            <div class="col-12 mt-3 text-center">
+                                            <div class="col-4 col-lg-12 mt-3 text-center">
                                                 <div class="row">
                                                     <span class="col-12 moyen customfont customweight">Race</span>
                                                     <span class="col-12 moyen customfont">{{$dog->race}}</span>    
                                                 </div>
                                             </div>
-                                            <div class="col-12 mt-3 text-center">
+                                            <div class="col-4 col-lg-12 mt-3 text-center">
                                                 <div class="row">
                                                     <span class="col-12 moyen customfont customweight">Naissance</span>
                                                     <span class="col-12 moyen customfont">{{$dog->naissance}}</span>    
                                                 </div>
                                             </div>
-                                            <div class="col-12 mt-3 text-center">
+                                            <div class="col-4 col-lg-12 mt-3 text-center">
                                                 <div class="row">
-                                                    <span class="col-12 moyen customfont customweight">Castré / Stérilisé</span>
+                                                    <span class="col-12 moyen customfont customweight">Stérilisé</span>
                                                     <span class="col-12 moyen customfont">@if(($dog->castre) == 0) Non @else Oui @endif</span>    
                                                 </div>
                                             </div>
@@ -74,6 +74,7 @@
                                     <p class="customfont little"></p>
                                 </div>
                             </div>
+                            <div class="col-12 invisible d-block d-lg-none"></div>
                         </div>
                     </div>
 @endforeach

@@ -5,7 +5,7 @@
 @section('content')
     <div class="col-12 h-100">
         <div class="row h-100">
-            <div class="col-6 h-100">
+            <div class="col-12 col-lg-6 h-100">
                 <div class="col-12 d-flex justify-content-center align-items-end mb-5 h-25">
                     <span class="customfont customweight title">Connexion</span>
                 </div>
@@ -13,7 +13,7 @@
                         @csrf
 
                         <div class="form-group row d-flex justify-content-center">
-                            <div class="col-md-6">
+                            <div class="col-6">
                                 <label for="email" class="customfont customweight little">E-Mail</label>
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 @error('email')
@@ -25,7 +25,7 @@
                         </div>
 
                         <div class="form-group row d-flex justify-content-center">
-                            <div class="col-md-6">
+                            <div class="col-6">
                                 <label for="password" class="customfont customweight little">Mot de passe</label>
                                 <input id="password" type="password"
                                     class="form-control @error('password') is-invalid @enderror" name="password" required
@@ -50,13 +50,14 @@
                                             {{ __('Forgot Your Password?') }}
                                         </a>
                                     @endif --}}
+                                <a class="col-12 d-block d-lg-none customfont customweight little p-0" href="{{ route('register') }}">Inscrivez-vous !</a>    
 
                             </div>
                         </div>
                     </form>
 
             </div>
-            <div class="col-6 h-100 border-left">
+            <div class="col-6 d-none d-lg-block h-100 border-left">
                 <div class="col-12 h-25 d-flex justify-content-center align-items-end mb-5 customfont customweight title">Inscription</div>
                 <div class="col-12 d-flex justify-content-center">
                     <a class="col-6" href="{{ route('register') }}"><button type="button" class="btn btn-warning col-12 customfont customweight moyen">S'inscrire</button></a>    

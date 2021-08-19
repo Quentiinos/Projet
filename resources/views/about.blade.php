@@ -28,20 +28,22 @@
                             </div>
                             <div class="col-10 offset-1 mb-5">
                                 <div class="row">
-                                    <div class="col-4 border-right">
+                                    <div class="col-12 col-lg-4 d-flex justify-content-center">
                                         <img src="/pictures/abandon.jpg" alt="" class="littlepicture">
                                     </div>
-                                    <div class="col-8 d-flex justify-content-start align-items-center customfont text">Lutter contre les abandons</div>
+                                    <div class="col-12 col-lg-8 mt-5 mt-lg-0 d-flex justify-content-center justify-content-lg-start align-items-center customfont text">Lutter contre les abandons</div>
+                                    <hr class="col-10 d-block d-lg-none">
                                 </div>
                             </div>
                             <div class="col-10 offset-1 mb-5">
                                 <div class="row">
-                                    <div class="col-4 border-right">
+                                    <div class="col-12 col-lg-4 d-flex justify-content-center">
                                         <img src="/pictures/maltraite.jpg" alt="" class="littlepicture">
                                     </div>
-                                    <div class="col-8 d-flex justify-content-start align-items-center customfont text">Agir contre la maltraitance</div>
+                                    <div class="col-12 col-lg-8 mt-5 mt-lg-0 d-flex justify-content-center justify-content-lg-start align-items-center customfont text">Agir contre la maltraitance</div>
                                 </div>
                             </div>
+                            <div class="col-12 invisible d-block d-lg-none"></div>
                         </div>
                     </div>
 @endsection

@@ -1,5 +1,5 @@
 @section('footer')
-        <div class="col-12 h-25 bg-warning">
+        <div class="col-12 h-25 bg-warning d-none d-lg-block">
             <div class="row d-flex justify-content-center">
                 <div class="col-6 mt-3 border-top border-bottom p-3 d-flex justify-content-between">
                     <div class="col-4"></div>

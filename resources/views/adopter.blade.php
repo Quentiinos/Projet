@@ -16,12 +16,12 @@
 @foreach ($select as $dog)
                                     <div class="col-10 mt-3">
                                         <div class="row">
-                                            <div class="col-3">
+                                            <div class="col-12 col-lg-3">
                                                 <img class="card-img-top" src="{{$dog->url_picture}}">
                                             </div>
-                                            <div class="col-9">
-                                                <h5 class="card-title customfont customweight title text-left underline m-0">{{$dog->name}}</h5>
-                                                <span class="customfont moyen text-center mb-3">{{$dog->race}} - {{$dog->age}} @if(($dog->age) <= 1) an @else ans @endif</span>
+                                            <div class="col-12 col-lg-9">
+                                                <h5 class="card-title customfont customweight title text-center text-lg-left mt-3 mt-lg-0 underline m-0">{{$dog->name}}</h5>
+                                                <p class="customfont moyen text-center text-lg-left mb-3">{{$dog->race}} - {{$dog->age}} @if(($dog->age) <= 1) an @else ans @endif</p>
                                                 <p class="card-text customfont mt-3">{{$dog->caractere}}</p>
                                                 <a href="{{URL::action('MainController@chien', $dog->id)}}" class="btn float-right btn-warning customfont mt-auto mb-3">Plus d'info</a>
                                             </div>
@@ -37,6 +37,7 @@
                                 <div class="row d-flex justify-content-around">
                                     <div class="col-10 my-5 d-flex justify-content-end">{{$select->links()}}</div>
                                 </div>
+                                <div class="col-12 invisible d-block d-lg-none"></div>
                             </div> 
                         </div>
                     </div>

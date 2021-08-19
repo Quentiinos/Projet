@@ -32,7 +32,13 @@ class MainController extends Controller
 
 
     public function contact(){
-        return view('contact');
+        $userinfo = Auth::id();
+        $sel = DB::select('select * from users where users.id ='.$userinfo);
+        if(Auth::check($userinfo)){
+            return view('contact', compact('sel'));
+        }else{
+            return redirect()->route('index');
+        }
     }
 
     public function contactsend(Request $request){
@@ -64,12 +70,32 @@ class MainController extends Controller
     }
 
     public function parametres(){
-        $user = Auth::id();
-        $select = DB::select('select users.id, users.name from users where users.id ='.$user);
-        if(Auth::check($user)){
-            return view('parametres', compact('select'));
+        $userinfo = Auth::id();
+        $sel = DB::select('select * from users where users.id ='.$userinfo);
+        if(Auth::check($userinfo)){
+            return view('parametres', compact('sel'));
         }else{
             return redirect()->route('index');
         }
+    }
+
+    public function addparam(Request $request){
+        $nom = $request->input('nom');
+        $prenom = $request->input('prenom');
+        $naissance = $request->input('naissance');
+        $sexe = $request->input('sexe');
+        $email = $request->input('email');
+        $tel = $request->input('tel');
+        $adresse = $request->input('adresse');
+        $compadresse = $request->input('compadresse');
+        $ville = $request->input('ville');
+        $codepostal = $request->input('codepostal');
+        $data=['name'=>$nom, 'surname'=>$prenom, 'birth'=>$naissance, 'sexe'=>$sexe, 'email'=>$email, 'phone'=>$tel, 'adress'=>$adresse, 'compadress'=>$compadresse, 'city'=>$ville, 'zip'=>$codepostal];
+        $user = Auth::id();
+        DB::table('users')
+        ->where('id', $user)
+        ->update($data);
+        return redirect()->route('index');
+
     }
 }
