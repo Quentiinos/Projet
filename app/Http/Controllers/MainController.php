@@ -12,9 +12,11 @@ use App\Chien;
 class MainController extends Controller
 {
     public function index(){
-        $newsapi = new NewsApi("052dace452d64e6380f1070db65b274a");
+
+        $newsapi = new NewsApi("052dace452d64e6380f1070db65b274a");     
         $all_articles = $newsapi->getEverything($q = "chiens, chien", $sources = null, $domains = null, $exclude_domains = null, $from = null, $to = null, $language = "fr", $sort_by = null,  $page_size = "4", $page = null);
         $articles = $all_articles->articles;
+
         $select = DB::select('select chiens.id, chiens.name, chiens.age, chiens.caractere, chiens.url_picture, races.name as race, sexe.name as sexe from chiens left join races on chiens.race_id = races.id left join sexe on chiens.sexe_id = sexe.id limit 4');
         return view('welcome', compact('articles', 'select'));
     }
@@ -52,11 +54,14 @@ class MainController extends Controller
     }
 
     public function adopter(){
+
         // $select = DB::select('select chiens.id, chiens.name, chiens.age, chiens.caractere, chiens.url_picture, races.name as race from chiens left join races on chiens.race_id = races.id');
+        
         $select = DB::table('chiens')
         ->select('chiens.id', 'chiens.name', 'chiens.age', 'chiens.caractere', 'chiens.url_picture', 'races.name as race')
         ->leftjoin('races', 'chiens.race_id', '=', 'races.id')
         ->paginate(5);
+
         if($select->isEmpty()){
             return redirect()->route('adopter');
         };

@@ -5,8 +5,8 @@
 @section('content')
                     <div class="col-12">
                         <div class="row h-100">
-                            <div class="col-10 offset-1 h-25 mt-5">
-                                <div class="row d-flex justify-content-between mt-5 align-items-center">
+                            <div class="col-10 offset-1 h-25 mt-lg-5">
+                                <div class="row d-flex justify-content-center justify-content-lg-between mt-5 align-items-center">
                                     <span class="customfont customweight title">Adoptez moi !</span>
                                     <hr class="col-12">
                                 </div>

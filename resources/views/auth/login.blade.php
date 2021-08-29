@@ -11,7 +11,6 @@
                 </div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
                         <div class="form-group row d-flex justify-content-center">
                             <div class="col-6">
                                 <label for="email" class="customfont customweight little">E-Mail</label>

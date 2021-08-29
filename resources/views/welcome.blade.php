@@ -27,7 +27,7 @@
                     </a>
                 </div>
         </div>
-        <div class="col-10 offset-1 mt-5">
+        <div class="col-10 offset-1 mt-lg-5">
             <div class="h25"></div>
             <div class="row d-flex justify-content-center justify-content-lg-between align-items-center">
                 <span class="customfont customweight title col-12 col-lg-6 text-center text-lg-left">Actualités</span>
