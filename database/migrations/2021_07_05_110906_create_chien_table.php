@@ -24,7 +24,7 @@ class CreateChienTable extends Migration
             $table->foreign('race_id')->references('id')->on('races');
             $table->string('naissance');
             $table->boolean('castre');
-            $table->text('url_picture');
+            $table->text('url_picture')->nullable();
         });
     }
 

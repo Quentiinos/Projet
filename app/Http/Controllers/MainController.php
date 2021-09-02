@@ -70,7 +70,9 @@ class MainController extends Controller
 
     public function chien($id){
         $chien = Chien::where('id', $id)->firstOrFail();
-        $select = DB::select('select chiens.id, chiens.name, chiens.age, chiens.naissance, chiens.caractere, chiens.castre, chiens.url_picture, races.name as race, sexe.name as sexe from chiens left join races on chiens.race_id = races.id left join sexe on chiens.sexe_id = sexe.id where chiens.id ='.$id);
+        $select = DB::select('select chiens.id, chiens.name, chiens.age, chiens.naissance, chiens.caractere, chiens.castre,
+        chiens.url_picture, races.name as race, sexe.name as sexe from chiens left join races on chiens.race_id = races.id
+        left join sexe on chiens.sexe_id = sexe.id where chiens.id ='.$id);
         return view('chien', compact('select'));
     }
 
@@ -102,5 +104,82 @@ class MainController extends Controller
         ->update($data);
         return redirect()->route('index');
 
+    }
+
+    public function admin(){
+
+        $select = DB::select('select chiens.id, chiens.name, races.name as race, chiens.url_picture from chiens left join races on chiens.race_id = races.id');
+        if(Auth::check() && Auth::user()->privilège == 1){
+            return view('admin', compact('select'));
+        }else{
+            return redirect()->route('index');
+        }
+        
+    }
+
+    public function delete($id){
+        if(Auth::check() && Auth::user()->privilège == 1){
+            $chien = Chien::where('id', $id)->firstOrFail();
+            $chien->delete();
+            return redirect()->route('admin');
+        }else{
+            return redirect()->route('index');
+        }
+    }
+
+    public function edit($id){
+        if(Auth::check() && Auth::user()->privilège == 1){
+            $chien = Chien::where('id', $id)->firstOrFail();
+            $select = DB::select('select * from chiens where chiens.id ='.$id);
+            return view('edit', compact('select'));
+        }else{
+            return redirect()->route('index');
+        }
+    }
+
+    public function editcheck(Request $request, $id){
+        if (Auth::check() && Auth::user()->privilège == 1) {
+            $nom = $request->input('nom');
+            $age = $request->input('age');
+            $birth = $request->input('birth');
+            $sexe = $request->input('sexe');
+            $race = $request->input('race');
+            $sterilise = $request->input('sterilise');
+            $caractere = $request->input('caractere');
+            $data=['name'=>$nom, 'age'=>$age, 'naissance'=>$birth, 'sexe_id'=>$sexe, 'race_id'=>$race, 'castre'=>$sterilise, 'caractere'=>$caractere];
+            DB::table('chiens')
+            ->where('id', $id)
+            ->update($data);
+            return redirect()->route('admin');
+        }else{
+            return redirect()->route('index');
+        }
+    }
+
+    public function add(){
+        if(Auth::check() && Auth::user()->privilège == 1){
+            return view('add');
+        }else{
+            return redirect()->route('index');
+        }
+    }
+
+    public function addcheck(Request $request){
+        if (Auth::check() && Auth::user()->privilège == 1) {
+            $nom = $request->input('nom');
+            $age = $request->input('age');
+            $birth = $request->input('birth');
+            $sexe = $request->input('sexe');
+            $race = $request->input('race');
+            $sterilise = $request->input('sterilise');
+            $caractere = $request->input('caractere');
+            $data=['name'=>$nom, 'age'=>$age, 'naissance'=>$birth, 'sexe_id'=>$sexe, 'race_id'=>$race, 'castre'=>$sterilise, 'caractere'=>$caractere, 'url_picture'=>null];
+            DB::table('chiens')
+        ->insert($data);
+            return redirect()->route('admin');
+        }else{
+            return redirect()->route('index');
+        }
+        
     }
 }

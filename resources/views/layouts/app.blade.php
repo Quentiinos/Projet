@@ -57,7 +57,7 @@
                                 <button class="btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-list moyen"></i></button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
 @if(Auth::check() && Auth::user()->privilège == 1)
-                                    <a class="nav-link customfont" href="#">Administration</a>
+                                    <a class="nav-link customfont" href="{{route('admin')}}">Administration</a>
 @endif
                                     <a class="nav-link customfont" href="{{route('parametres')}}">Paramètres</a>
                                     <a class="nav-link customfont customweight" href="{{route('logout')}}">Deconnexion</a>
