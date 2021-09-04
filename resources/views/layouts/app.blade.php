@@ -111,6 +111,9 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                                     <a class="nav-link customfont" href="{{route('contact')}}">Contact</a>
                                     <a class="nav-link customfont" href="{{route('parametres')}}">Paramètres</a>
+@if(Auth::check() && Auth::user()->privilège == 1)
+                                    <a class="nav-link customfont" href="{{route('admin')}}">Administration</a>
+@endif
                                     <a class="nav-link customfont customweight" href="{{route('logout')}}">Deconnexion</a>
                                 </div>
                             </div>

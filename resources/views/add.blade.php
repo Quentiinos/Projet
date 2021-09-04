@@ -21,73 +21,84 @@
                         </a>
                     </div>
                     <hr class="col-12">
-                    <div class="col-12">
-                        <form action="{{route('addcheck')}}" method="post">
-                            @csrf
-                            <div class="form-group row d-flex justify-content-center">
-                                <div class="col-8 col-lg-6">
-                                    <label for="nom" class="customfont customweight little">Nom</label>
-                                    <input id="nom" type="text" class="form-control" name="nom"  required>
-                                </div>
-                            </div>
-                            <div class="form-group row d-flex justify-content-center">
-                                <div class="col-8 col-lg-2">
-                                    <label for="age" class="customfont customweight little">Age</label>
-                                    <input id="age" type="text" class="form-control" name="age" required>
-                                </div>
-                                <div class="col-8 col-lg-4">
-                                    <label for="birth" class="customfont customweight little">Date de naissance</label>
-                                    <input id="birth" type="text" class="form-control" name="birth" required>
-                                </div>
-                            </div>
-                            <div class="form-group row d-flex justify-content-center">
-                                <div class="col-8 col-lg-3">
-                                    <label for="sexe" class="customfont customweight little">Sexe</label>
-                                    <select name="sexe" id="sexe" class="form-control">
-                                        <option value="1">Mâle</option>
-                                        <option value="2">Femelle</option>
-                                    </select>
-                                </div>
-                                <div class="col-8 col-lg-3">
-                                    <label for="race" class="customfont customweight little">Race</label>
-                                    <select name="race" id="race" class="form-control">
-                                        <option value="1">Labrador</option>
-                                        <option value="2">Saint-Bernard</option>
-                                        <option value="3">Montagne Des Pyrénées</option>
-                                        <option value="4">Jack Russell</option>
-                                        <option value="5">Bouledogue Français</option>
-                                        <option value="6">Bouvier Bernois</option>
-                                        <option value="7">Berger Australien</option>
-                                        <option value="8">Golden Retriever</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row d-flex justify-content-center">
-                                <div class="col-8 col-lg-3">
-                                    <label for="sterilise" class="customfont customweight little">Strérilisé</label>
-                                    <select name="sterilise" id="sterilise" class="form-control">
-                                        <option value="1">Non</option>
-                                        <option value="2">Oui</option>
-                                    </select>
-                                </div>
-                                <div class="col-8 col-lg-3">
-                                    <label for="image" class="customfont customweight little">Image</label>
-                                    <input id="image" type="text" class="form-control" name="image" value="" disabled>
-                                </div>
-                            </div>
-                            <div class="form-group row d-flex justify-content-center">
-                                <div class="col-8 col-lg-6">
-                                    <label for="caractere" class="customfont customweight little">Caractère</label>
-                                    <textarea name="caractere" class="form-control" id="caractere" rows="4"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row d-flex justify-content-center mb-5">
-                                <div class="col-8 col-lg-6">
-                                    <button type="submit" class="btn btn-warning customfont customweight float-right">Ajouter</button>
-                                </div>
-                            </div>
+                </div>
+            </div>
+        </nav>
+        <div class="col-12">
+            <form action="{{route('addcheck')}}" method="post">
+                @csrf
+                <div class="form-group row d-flex justify-content-center">
+                    <div class="col-8 col-lg-6 mt-sm-5 mt-0">
+                        <label for="nom" class="customfont customweight little">Nom</label>
+                        <input id="nom" type="text" class="form-control" name="nom"  required>
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center">
+                    <div class="col-8 col-lg-2">
+                        <label for="age" class="customfont customweight little">Age</label>
+                        <input id="age" type="text" class="form-control" name="age" required>
+                    </div>
+                    <div class="col-8 col-lg-4">
+                        <label for="birth" class="customfont customweight little">Date de naissance</label>
+                        <input id="birth" type="text" class="form-control" name="birth" required>
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center">
+                    <div class="col-8 col-lg-3">
+                        <label for="sexe" class="customfont customweight little">Sexe</label>
+                        <select name="sexe" id="sexe" class="form-control">
+                            <option value="1">Mâle</option>
+                            <option value="2">Femelle</option>
+                        </select>
+                    </div>
+                    <div class="col-8 col-lg-3">
+                        <label for="race" class="customfont customweight little">Race</label>
+                        <select name="race" id="race" class="form-control">
+                            <option value="1">Labrador</option>
+                            <option value="2">Saint-Bernard</option>
+                            <option value="3">Montagne Des Pyrénées</option>
+                            <option value="4">Jack Russell</option>
+                            <option value="5">Bouledogue Français</option>
+                            <option value="6">Bouvier Bernois</option>
+                            <option value="7">Berger Australien</option>
+                            <option value="8">Golden Retriever</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center">
+                    <div class="col-8 col-lg-3">
+                        <label for="sterilise" class="customfont customweight little">Strérilisé</label>
+                        <select name="sterilise" id="sterilise" class="form-control">
+                            <option value="1">Non</option>
+                            <option value="2">Oui</option>
+                        </select>
+                    </div>
+                    <div class="col-8 col-lg-3">
+                        <label for="image" class="customfont customweight little">Image</label>
+                        <input id="image" type="text" class="form-control" name="image" value="" disabled>
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center">
+                    <div class="col-8 col-lg-6">
+                        <label for="caractere" class="customfont customweight little">Caractère</label>
+                        <textarea name="caractere" class="form-control" id="caractere" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center mb-5">
+                    <div class="col-8 col-lg-6">
+                        <button type="submit" class="btn btn-warning customfont customweight float-right">Ajouter</button>
+                    </div>
+                </div>
 
-                        </form>
+            </form>
+        </div>
+        <nav class="navbar navbar-light p-0 d-block d-lg-none">
+            <div class="col-12 fixed-bottom">
+                <div class="row bg-white d-flex align-items-center">
+                    <div class="col-12">
+                        <a href="/" id="logozone" class="d-flex justify-content-around">
+                            <img class="logo my-3" id="logo" src="/pictures/dogood.png">
+                        </a>
                     </div>
                 </div>
             </div>

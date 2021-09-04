@@ -1,4 +1,5 @@
 @section('title', 'Administration')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,7 @@
         <nav class="navbar navbar-light p-0 d-none d-lg-block">
             <div class="col-12">
                 <div class="row bg-white">
-                    <div class="col-12 d-flex justify-content-center align-items-center">
+                    <div class="col-12 d-sm-none d-lg-flex justify-content-center align-items-center">
                         <a href="/" id="logozone">
                             <img class="logo mt-3 ml-5 mr-3 mb-3" id="logo" src="/pictures/dogood.png">
                         </a>
@@ -24,7 +25,7 @@
             </div>
         </nav>
         <div class="row h-100">
-            <div class="col-2 bg-warning border-0">
+            <div class="col-2 d-sm-none d-lg-block bg-warning border-0">
                 <div class="row">
                     <ul class="col-12 list-group p-0">
                         <li class="list-group-item active bg-warning border border-dark rounded-0 text-center customfont customweight">CONTENU</li>
@@ -32,7 +33,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-10 p-0">
+            <div class="col-sm-12 col-lg-10 p-0">
                 <table class="table">
                     <thead>
                         <tr>
@@ -67,6 +68,17 @@
                     </tbody>
                 </table>
             </div>
+            <nav class="navbar navbar-light p-0 d-block d-lg-none">
+                <div class="col-12 fixed-bottom">
+                    <div class="row bg-white d-flex align-items-center">
+                        <div class="col-12">
+                            <a href="/" id="logozone" class="d-flex justify-content-around">
+                                <img class="logo my-3" id="logo" src="/pictures/dogood.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
     </div>    
 </body>
