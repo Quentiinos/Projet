@@ -44,15 +44,6 @@
                                 </form>
 @endforeach
                             </div>
-                            <div class="col-4 d-none d-lg-block">
-                                <div class="customheight"></div>
-                                <div class="col-12 d-flex justify-content-center align-items-center mt-5">
-                                    <a href="/file/DEBAERE Quentin - CV.pdf" target="_blank" class="customfont">
-                                        <i class="bi bi-file-earmark-pdf"></i>
-                                        <span>Voir mon CV</span>
-                                    </a>
-                                </div>
-                            </div>
                         </div>
                     </div>
 @endsection

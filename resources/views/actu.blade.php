@@ -20,7 +20,7 @@
                                         <div class="card-body d-flex flex-column">
                                           <h5 class="card-title">{{$article->title}}</h5>
                                           <p class="card-text">{{$article->description}}</p>
-                                          <a href="{{$article->url}}" class="btn btn-warning float-right customfont mt-auto">Lire la suite</a>
+                                          <a href="{{$article->url}}" target="_blank" class="btn btn-warning float-right customfont mt-auto">Lire la suite</a>
                                         </div>
                                     </div>
                                     @else
